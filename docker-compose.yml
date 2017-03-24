@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+      - 3000
+    volumes:
+      - .:/usr/src/app/
+      - gradle-cache:/usr/src/app/.gradle
+
+volumes:
+  gradle-cache:

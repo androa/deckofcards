@@ -1,0 +1,6 @@
+.git
+.gitignore
+.gradle
+README.md
+build
+docker-compose.*
