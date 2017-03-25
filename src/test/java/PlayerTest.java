@@ -1,4 +1,4 @@
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 
@@ -24,10 +24,6 @@ public class PlayerTest {
   @Test public void testPlayerCanSum() {
     Integer expectedValue = 11;
     Integer currentScore = this.player.getCurrentScore();
-    assertEquals(
-      "Dealer should give us two cards",
-      expectedValue,
-      currentScore
-    );
+    assertEquals("Dealer should give us two cards", expectedValue, currentScore);
   }
 }
