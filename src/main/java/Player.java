@@ -23,9 +23,6 @@ public class Player {
       .stream()
       .map(card -> card.getNumericalValue())
       .reduce(0, (sum, cardValue) -> sum += cardValue, (sum1, sum2) -> sum1 + sum2);
-    /*this.hand.forEach((Card card) -> {
-      score += card.getNumericalValue();
-    });*/
 
     return score;
   }
