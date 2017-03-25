@@ -19,11 +19,23 @@ public class Player {
   }
 
   public Integer getCurrentScore() {
-    Integer score = this.hand
-      .stream()
+    return this.hand.stream()
       .map(card -> card.getNumericalValue())
       .reduce(0, (sum, cardValue) -> sum += cardValue, (sum1, sum2) -> sum1 + sum2);
+  }
 
-    return score;
+  public String getNextPlay(int scoreToBeat) {
+    String nextPlay = null;
+    int score = this.getCurrentScore();
+
+    if (score == 21) {
+      nextPlay = "stand";
+    } else if (score < scoreToBeat) {
+      nextPlay = "hit";
+    } else if (score >= scoreToBeat) {
+      nextPlay = "stand";
+    }
+
+    return nextPlay;
   }
 }
