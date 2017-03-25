@@ -14,9 +14,8 @@ public class Player {
     return this.name;
   }
 
-  public Player recieveCards(Collection cards) {
+  public void recieveCards(Collection cards) {
     this.hand.addAll(cards);
-    return this;
   }
 
   public Integer getCurrentScore() {
