@@ -16,4 +16,20 @@ public class DeckTest {
       deck.cardsLeft()
     );
   }
+
+  @Test public void testDeckReducesAfterDraw() {
+    Deck deck = new Deck();
+
+    deck.addCard(new Card("HEARTS", "1"));
+    deck.addCard(new Card("SPADES", "Q"));
+
+    deck.drawCard();
+
+    Integer expectedValue = 1;
+    assertEquals(
+      "Deck should hold one card",
+      expectedValue,
+      deck.cardsLeft()
+    );
+  }
 }

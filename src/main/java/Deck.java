@@ -1,7 +1,7 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Deck {
-  private ArrayList<Card> cards = new ArrayList();
+  private LinkedList<Card> cards = new LinkedList();
 
   public Deck addCard(Card card) {
     this.cards.add(card);
@@ -10,5 +10,9 @@ public class Deck {
 
   public Integer cardsLeft() {
     return this.cards.size();
+  }
+
+  public Card drawCard() {
+    return this.cards.poll();
   }
 }
