@@ -1,10 +1,8 @@
 FROM gradle:jdk8
 
-WORKDIR /usr/src/app
+WORKDIR /home/gradle/
 
-COPY . /usr/src/app/
+COPY . /home/gradle/
 RUN ./gradlew build
-
-EXPOSE 3000
 
 CMD ["./gradlew", "run"]
