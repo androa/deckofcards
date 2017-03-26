@@ -18,11 +18,11 @@ public class RemoteShuffle implements Shuffle {
   static final JsonFactory JSON_FACTORY = new JacksonFactory();
 
   public static class RemoteCard extends GenericJson {
-    @Key private String suite;
+    @Key private String suit;
     @Key private String value;
 
     public String getSuite() {
-      return suite;
+      return suit;
     }
 
     public String getValue() {
