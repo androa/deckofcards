@@ -19,4 +19,8 @@ public class Card {
         return Integer.parseInt(this.value);
     }
   }
+
+  public String toString() {
+    return this.suite.charAt(0) + this.value;
+  }
 }
