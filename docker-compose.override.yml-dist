@@ -4,6 +4,8 @@ services:
     volumes:
       - .:/home/gradle
       - gradle-cache:/home/gradle/.gradle
+    environment:
+      - SHUFFLE_ENDPOINT=http://nav-deckofcards.herokuapp.com/shuffle
 
   test:
     extends: app
