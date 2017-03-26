@@ -1,5 +1,7 @@
 import java.util.Collection;
 
+import java.util.Collections;
+
 import java.util.HashSet;
 
 public class Player {
@@ -12,6 +14,10 @@ public class Player {
 
   public String getName() {
     return this.name;
+  }
+
+  public Collection<Card> getHand() {
+    return Collections.unmodifiableCollection(this.hand);
   }
 
   public void recieveCards(Collection cards) {
