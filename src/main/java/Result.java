@@ -1,6 +1,5 @@
-import java.util.LinkedHashSet;
-
 import java.util.Collection;
+import java.util.LinkedHashSet;
 
 public class Result {
   private LinkedHashSet<Player> players = new LinkedHashSet();
@@ -14,10 +13,6 @@ public class Result {
   }
 
   public Player getWinner() {
-    return this.players.stream()
-      .filter(p -> p.getCurrentScore() <= 21)
-      .limit(1)
-      .findFirst()
-      .get();
+    return this.players.stream().filter(p -> p.getCurrentScore() <= 21).limit(1).findFirst().get();
   }
 }

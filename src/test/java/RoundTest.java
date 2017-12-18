@@ -1,13 +1,12 @@
 import static org.junit.Assert.assertEquals;
-
 import static org.junit.Assert.assertSame;
 
+import java.util.LinkedHashSet;
 import org.junit.Test;
 
-import java.util.LinkedHashSet;
-
 public class RoundTest {
-  @Test public void testWinOnBlackjack() {
+  @Test
+  public void testWinOnBlackjack() {
     Deck deck = new Deck();
     deck.addCard(new Card("HEARTS", "1"));
     deck.addCard(new Card("SPADES", "Q"));
@@ -31,7 +30,8 @@ public class RoundTest {
     assertSame("The winner is André", expectedWinner, winner);
   }
 
-  @Test public void testWinOn19() {
+  @Test
+  public void testWinOn19() {
     Deck deck = new Deck();
     deck.addCard(new Card("HEARTS", "1")); // André
     deck.addCard(new Card("SPADES", "Q")); // André

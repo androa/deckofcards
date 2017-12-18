@@ -11,18 +11,27 @@ public class App {
 
     blackjack.seatPlayers(players);
 
-    Result result = blackjack.play();;
+    Result result = blackjack.play();
     Player winner = result.getWinner();
 
-    StringBuilder prettyResult = new StringBuilder()
-      .append("Vinner: ") .append(winner.getName()).append("\n\n")
-      .append("Resultat:\n");
+    StringBuilder prettyResult =
+        new StringBuilder()
+            .append("Vinner: ")
+            .append(winner.getName())
+            .append("\n\n")
+            .append("Resultat:\n");
 
-    result.getPlayers().forEach(p -> prettyResult
-      .append(p.getName()).append(" | ")
-      .append(p.getCurrentScore()).append(" | ")
-      .append(p.getHand()).append("\n")
-    );
+    result
+        .getPlayers()
+        .forEach(
+            p ->
+                prettyResult
+                    .append(p.getName())
+                    .append(" | ")
+                    .append(p.getCurrentScore())
+                    .append(" | ")
+                    .append(p.getHand())
+                    .append("\n"));
 
     return prettyResult.toString();
   }

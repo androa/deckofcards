@@ -1,5 +1,4 @@
 import java.util.Collection;
-import java.util.Optional;
 
 public class Blackjack {
   private Shuffle shuffle;

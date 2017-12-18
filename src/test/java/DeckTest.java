@@ -1,11 +1,11 @@
 import static org.junit.Assert.assertEquals;
-
 import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
 public class DeckTest {
-  @Test public void testDeckHoldsCards() {
+  @Test
+  public void testDeckHoldsCards() {
     Deck deck = new Deck();
 
     deck.addCard(new Card("HEARTS", "1"));
@@ -15,7 +15,8 @@ public class DeckTest {
     assertEquals("Deck should hold two cards", expectedValue, deck.cardsLeft());
   }
 
-  @Test public void testDeckReducesAfterDraw() {
+  @Test
+  public void testDeckReducesAfterDraw() {
     Deck deck = new Deck();
 
     deck.addCard(new Card("HEARTS", "1"));
@@ -27,7 +28,8 @@ public class DeckTest {
     assertEquals("Deck should hold one card", expectedValue, deck.cardsLeft());
   }
 
-  @Test public void testDeckDrawsInOrder() {
+  @Test
+  public void testDeckDrawsInOrder() {
     Deck deck = new Deck();
 
     Card card1 = new Card("HEARTS", "1");

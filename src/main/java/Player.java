@@ -1,7 +1,5 @@
 import java.util.Collection;
-
 import java.util.Collections;
-
 import java.util.HashSet;
 
 public class Player {
@@ -25,9 +23,10 @@ public class Player {
   }
 
   public Integer getCurrentScore() {
-    return this.hand.stream()
-      .map(card -> card.getNumericalValue())
-      .reduce(0, (sum, cardValue) -> sum += cardValue, (sum1, sum2) -> sum1 + sum2);
+    return this.hand
+        .stream()
+        .map(card -> card.getNumericalValue())
+        .reduce(0, (sum, cardValue) -> sum += cardValue, (sum1, sum2) -> sum1 + sum2);
   }
 
   public String getNextPlay(int scoreToBeat) {

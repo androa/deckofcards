@@ -8,7 +8,6 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.JsonObjectParser;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.client.util.Key;
-
 import java.io.IOException;
 
 public class RemoteShuffle implements Shuffle {
@@ -34,7 +33,7 @@ public class RemoteShuffle implements Shuffle {
     this.endpoint = endpoint;
   }
 
-  public Deck shuffle (Deck deck) {
+  public Deck shuffle(Deck deck) {
     RemoteCard[] cards = this.loadDataFromNetwork();
 
     for (RemoteCard card : cards) {

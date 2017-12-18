@@ -1,11 +1,11 @@
 import static org.junit.Assert.assertTrue;
 
+import java.util.LinkedHashSet;
 import org.junit.Test;
 
-import java.util.LinkedHashSet;
-
 public class ResultTest {
-  @Test public void testResultsHoldsPlayers() {
+  @Test
+  public void testResultsHoldsPlayers() {
     LinkedHashSet<Player> players = new LinkedHashSet();
     Player p1 = new Player("André");
     Player p2 = new Player("Magnus");

@@ -1,11 +1,11 @@
 import static org.junit.Assert.assertEquals;
-
 import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
 
 public class TableTest {
-  @Test public void testWinOnBlackjack() {
+  @Test
+  public void testWinOnBlackjack() {
     Deck deck = new Deck();
     deck.addCard(new Card("HEARTS", "1"));
     deck.addCard(new Card("SPADES", "Q"));
@@ -28,7 +28,8 @@ public class TableTest {
     assertSame("The winner is André", expectedWinner, winner);
   }
 
-  @Test public void testWinOn19() {
+  @Test
+  public void testWinOn19() {
     Deck deck = new Deck();
     deck.addCard(new Card("HEARTS", "1")); // André
     deck.addCard(new Card("SPADES", "Q")); // André
